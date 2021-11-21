@@ -87,8 +87,8 @@ p.pr.surv <- ggplot(plotData, aes(x = No, y = gamma5)) +
 
 
 # Combine convergerce plots for longitidunal part of Joint Model.
-converge_lme <- ggarrange(p.age, p.tppm, p.pr, p.time, ncol = 2, nrow = 2)
-converge_surv <- ggarrange(p.age.surv, p.pd.surv, p.ni.surv, p.pr.surv, p.assoc, logL, 
+converge_lme <- ggarrange(p.age, p.tppm, p.pr, ncol = 2, nrow = 2)
+converge_surv <- ggarrange(p.age.surv, p.pd.surv, p.ni.surv, p.pr.surv, p.assoc, 
                            ncol = 2, nrow = 3)
 
 ggsave(filename = "figures/converge_lme.png", plot = converge_lme, 
